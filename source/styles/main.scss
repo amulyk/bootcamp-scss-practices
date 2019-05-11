@@ -1,10 +1,24 @@
 $border-color-1: #E2E6E7;
-$color-1: #FFC12D;
-$color-2: #2C3E50;
-$color-3: #A1B1BC;
-$color-4: #A47503;
-$color-5: #CFD2D3;
+$color-2: #FFC12D;
+$color-0: #2C3E50;
+$color-1: #A1B1BC;
+$color-2-2: #A47503;
+$color-3: #CFD2D3;
+$color-4: #97E411;
+$color-4-4: #558502;
+$color-5:#FD7761;
+$color-5-5:#D52E13;
+$color-6:#6FD9FC;
+$color-6-6:#0787D4;
+$color-7:#A39CDC;
+$color-7-7:#5B568E;
 $border-color-2: #F9B718;
+$border-color-4: #66B82E;
+$border-color-5: #F55C43;
+$border-color-6:#47B4F6;
+$border-color-7: #8781BD;
+
+
 
 
 *{
@@ -15,7 +29,7 @@ $border-color-2: #F9B718;
 
 main{
     padding-top: 50px;
-    width: 1170px;
+    width: 1171px;
     margin: auto;
 }
 
@@ -26,18 +40,23 @@ section{
     position: relative;
     display: inline-flex;
     padding: 34px 92px 34px 48px;
+    margin-left: 26px;
+    margin-bottom: 31px;
+
+    &:nth-child(odd){
+        margin-left: 0;
+    }
 
     div{
-
         &::before{
             content: '\f12a';
             font-family: 'fontawesome';
-            background-color: $color-1;
+            background-color: $color-2;
             border: 8px solid $border-color-2;
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            color: #A47503;
+            color: $color-2-2;
             font-size: 24px;
             font-weight: 400;
             display: flex;
@@ -52,7 +71,7 @@ section{
             font-family: 'Lato';
             font-size: 14px;
             font-weight: 900;
-            color: $color-2;
+            color: $color-0;
             line-height: 26px;
             text-transform: uppercase;
             letter-spacing: 1.35px;
@@ -64,20 +83,64 @@ section{
             font-family: 'Lato';
             font-size: 14px;
             font-weight: 400;
-            color: $color-2;
+            color: $color-1;
             line-height: 24px;
-            padding-top: 5px
+            padding-top: 5px;
+            width: 106%;
         }
     }
 
     a::after{
         content: "\f00d";
         font-family: 'fontawesome';
-        color: $color-5;
+        color: $color-3;
         font-size: 14px;
         position: absolute;
         top: 17px;
         right: 18px;
 
     }
+
+    &.done{
+        div:before{
+            content: '\f00c';
+            background-color: $color-4;
+            color: $color-4-4;
+            border-color: $border-color-4;
+          
+        }
+    }
+
+    &.reject{
+        div:before{
+            content: '\f00d';
+            background-color: $color-5;
+            color: $color-5-5;
+            border-color: $border-color-5;
+          
+        }
+    }
+
+    &.flesh{
+        div:before{
+            content: '\f0e7';
+            background-color: $color-6;
+            color: $color-6-6;
+            border-color: $border-color-6;
+          
+        }
+    }
+
+    &.info{
+        width: 100%;
+
+        div:before{
+            content: '\f129';
+            background-color: $color-7;
+            color: $color-7-7;
+            border-color: $border-color-7;
+          
+        }
+    }
+    
 }
