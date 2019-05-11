@@ -1,20 +1,53 @@
-$border-color: #E2E6E7;
-$color-1: #F9B718;
+$border-color-1: #E2E6E7;
+$color-1: #FFC12D;
 $color-2: #2C3E50;
 $color-3: #A1B1BC;
+$color-4: #A47503;
+$color-5: #CFD2D3;
+$border-color-2: #F9B718;
+
 
 *{
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
+main{
+    padding-top: 50px;
+    width: 1170px;
+    margin: auto;
+}
+
 section{
-    border: 1px solid $border-color;
-    border-radius: 10px;
+    width: 570px;
+    border: 1px solid  $border-color-1;
+    border-radius: 10px;   
+    position: relative;
+    display: inline-flex;
+    padding: 34px 92px 34px 48px;
 
     div{
 
+        &::before{
+            content: '\f12a';
+            font-family: 'fontawesome';
+            background-color: $color-1;
+            border: 8px solid $border-color-2;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: #A47503;
+            font-size: 24px;
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            margin-right: 28px;
+            margin-top: 7px;
+        }
+        
         h3{
             font-family: 'Lato';
             font-size: 14px;
@@ -22,24 +55,29 @@ section{
             color: $color-2;
             line-height: 26px;
             text-transform: uppercase;
+            letter-spacing: 1.35px;
+            
+            
         }
+
         p{
             font-family: 'Lato';
             font-size: 14px;
             font-weight: 400;
             color: $color-2;
             line-height: 24px;
-        }
-
-        &:before{
-            content: '/12a';
-            background-color: $color-1;
-            width: 50px;
-            height: 50px;
+            padding-top: 5px
         }
     }
- 
+
+    a::after{
+        content: "\f00d";
+        font-family: 'fontawesome';
+        color: $color-5;
+        font-size: 14px;
+        position: absolute;
+        top: 17px;
+        right: 18px;
+
+    }
 }
-
-
-   
