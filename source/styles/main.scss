@@ -19,8 +19,6 @@ $border-color-7: #8781BD;
 $font-awesome: 'fontawesome';
 
 
-
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -83,6 +81,7 @@ section{
 
     }
 
+
     &.solid{
         background-color: $color-2;
         
@@ -131,6 +130,7 @@ section{
     
 
     div{
+        max-width: 336px;
 
         h3{
             font-family: 'Lato';
@@ -188,9 +188,11 @@ section{
     }
     }
 
-    &.info{
-        width: 100%;
+    &.info {
+        div{
 
+        max-width: none;
+    }
         &.solid{
         background-color: $color-7;
        
